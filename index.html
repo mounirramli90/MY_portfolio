@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Educator & NLP Researcher</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#0f172a', // Deep slate blue
+                        secondary: '#2563eb', // Crisp blue accent
+                        light: '#f8fafc', // Subtle gray/white
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom scrollbar for a polished look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+        
+        /* Subtle fade-in animation */
+        .fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="font-sans text-slate-800 bg-white antialiased selection:bg-secondary selection:text-white">
+
+    <!-- Sticky Navigation -->
+    <nav class="fixed w-full z-50 top-0 transition-all duration-300 bg-primary text-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#home" class="text-xl font-bold tracking-tight">Portfolio.</a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="hover:text-secondary transition-colors px-3 py-2 text-sm font-medium">Home</a>
+                    <a href="#about" class="hover:text-secondary transition-colors px-3 py-2 text-sm font-medium">About</a>
+                    <a href="#projects" class="hover:text-secondary transition-colors px-3 py-2 text-sm font-medium">Projects</a>
+                    <a href="#research" class="hover:text-secondary transition-colors px-3 py-2 text-sm font-medium">Research</a>
+                    <a href="#contact" class="hover:text-secondary transition-colors px-3 py-2 text-sm font-medium">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-primary border-t border-slate-700">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 shadow-inner">
+                <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-slate-800 hover:text-secondary">Home</a>
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-slate-800 hover:text-secondary">About</a>
+                <a href="#projects" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-slate-800 hover:text-secondary">Projects</a>
+                <a href="#research" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-slate-800 hover:text-secondary">Research</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-slate-800 hover:text-secondary">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        
+        <!-- Home Section -->
+        <section id="home" class="min-h-screen flex items-center justify-center bg-light pt-16 relative overflow-hidden">
+            <!-- Decorative background blob -->
+            <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-secondary/10 blur-3xl"></div>
+            <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-blue-300/20 blur-3xl"></div>
+            
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col md:flex-row items-center justify-between fade-in">
+                
+                <div class="md:w-1/2 text-center md:text-left mb-10 md:mb-0">
+                    <h2 class="text-sm font-semibold text-secondary tracking-wide uppercase mb-2">Welcome to my space</h2>
+                    <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-primary leading-tight mb-4">
+                        Educator & <br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-blue-400">NLP Researcher</span>
+                    </h1>
+                    <p class="mt-4 text-lg text-slate-600 mb-8 max-w-lg mx-auto md:mx-0">
+                        Bridging the gap between secondary education pedagogy and cutting-edge artificial intelligence, specializing in speech processing and dialectal Arabic models.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                        <a href="#projects" class="inline-flex justify-center items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-secondary hover:bg-blue-700 shadow-lg hover:shadow-xl transition-all">
+                            View My Work
+                        </a>
+                        <a href="#contact" class="inline-flex justify-center items-center px-6 py-3 border border-slate-300 text-base font-medium rounded-md text-slate-700 bg-white hover:bg-slate-50 shadow-sm transition-all">
+                            Get in Touch
+                        </a>
+                    </div>
+                </div>
+
+                <div class="md:w-1/2 flex justify-center md:justify-end">
+                    <!-- Placeholder Profile Image -->
+                    <div class="relative w-64 h-64 sm:w-80 sm:h-80 rounded-full bg-white p-2 shadow-2xl border border-slate-100">
+                        <img src="https://placehold.co/400x400/0f172a/ffffff?text=Profile+Photo" alt="Profile" class="rounded-full w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-extrabold text-primary sm:text-4xl">About Me</h2>
+                    <div class="w-16 h-1 bg-secondary mx-auto mt-4 rounded"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+                    <!-- Bio -->
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-4 text-slate-800">My Background</h3>
+                        <p class="text-slate-600 mb-4 leading-relaxed">
+                            I am a dedicated high school educator currently pursuing advanced studies in Natural Language Processing and Artificial Intelligence. My unique position allows me to intersect classical pedagogy with modern technological advancements.
+                        </p>
+                        <p class="text-slate-600 leading-relaxed">
+                            My passion lies in developing intelligent tools that assist in education, as well as researching low-resource languages. By combining my classroom experience with software development and AI modeling, I aim to create impactful, data-driven solutions for both academia and industry.
+                        </p>
+                    </div>
+
+                    <!-- Skills -->
+                    <div class="bg-slate-50 rounded-xl p-8 shadow-sm border border-slate-100">
+                        <h3 class="text-2xl font-semibold mb-6 text-slate-800">Core Technical Skills</h3>
+                        
+                        <div class="space-y-4">
+                            <!-- Skill 1 -->
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm font-medium text-slate-700">Python & Data Science</span>
+                                </div>
+                                <div class="w-full bg-slate-200 rounded-full h-2">
+                                    <div class="bg-secondary h-2 rounded-full" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <!-- Skill 2 -->
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm font-medium text-slate-700">Generative AI & NLP Models</span>
+                                </div>
+                                <div class="w-full bg-slate-200 rounded-full h-2">
+                                    <div class="bg-secondary h-2 rounded-full" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <!-- Skill 3 -->
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm font-medium text-slate-700">Web Development (HTML/CSS/JS)</span>
+                                </div>
+                                <div class="w-full bg-slate-200 rounded-full h-2">
+                                    <div class="bg-secondary h-2 rounded-full" style="width: 80%"></div>
+                                </div>
+                            </div>
+                            <!-- Skill 4 -->
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm font-medium text-slate-700">Database & Backend (Firebase/SQL)</span>
+                                </div>
+                                <div class="w-full bg-slate-200 rounded-full h-2">
+                                    <div class="bg-secondary h-2 rounded-full" style="width: 75%"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-8 flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-white text-slate-600 text-xs rounded-full border border-slate-200 shadow-sm">PyTorch</span>
+                            <span class="px-3 py-1 bg-white text-slate-600 text-xs rounded-full border border-slate-200 shadow-sm">Manim Engine</span>
+                            <span class="px-3 py-1 bg-white text-slate-600 text-xs rounded-full border border-slate-200 shadow-sm">Git/GitHub</span>
+                            <span class="px-3 py-1 bg-white text-slate-600 text-xs rounded-full border border-slate-200 shadow-sm">Prompt Engineering</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-24 bg-light">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-extrabold text-primary sm:text-4xl">Featured Projects</h2>
+                    <div class="w-16 h-1 bg-secondary mx-auto mt-4 rounded"></div>
+                    <p class="mt-4 text-slate-600 max-w-2xl mx-auto">A showcase of practical applications combining software engineering with educational and linguistic goals.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Card 1 -->
+                    <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 border border-slate-100 flex flex-col">
+                        <div class="h-48 bg-slate-200 flex items-center justify-center">
+                            <i class="fas fa-microphone-lines text-5xl text-slate-400"></i>
+                        </div>
+                        <div class="p-6 flex-grow flex flex-col">
+                            <h3 class="text-xl font-bold text-slate-800 mb-2">Transcription Annotation Web App</h3>
+                            <p class="text-slate-600 mb-4 flex-grow text-sm">
+                                A responsive web interface allowing annotators to listen to audio snippets and correct ASR-generated texts. Integrated securely with Firebase for real-time data storage.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded">JavaScript</span>
+                                <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded">Firebase</span>
+                            </div>
+                            <a href="#" class="text-secondary font-medium hover:text-primary transition-colors text-sm">View Details &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 border border-slate-100 flex flex-col">
+                        <div class="h-48 bg-slate-200 flex items-center justify-center">
+                            <i class="fas fa-shapes text-5xl text-slate-400"></i>
+                        </div>
+                        <div class="p-6 flex-grow flex flex-col">
+                            <h3 class="text-xl font-bold text-slate-800 mb-2">Educational Animations with Manim</h3>
+                            <p class="text-slate-600 mb-4 flex-grow text-sm">
+                                Programmatically generated mathematical and linguistic animations to enhance high school student comprehension using the Python Manim engine.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded">Python</span>
+                                <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded">Manim</span>
+                            </div>
+                            <a href="#" class="text-secondary font-medium hover:text-primary transition-colors text-sm">View Details &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 border border-slate-100 flex flex-col">
+                        <div class="h-48 bg-slate-200 flex items-center justify-center">
+                            <i class="fas fa-robot text-5xl text-slate-400"></i>
+                        </div>
+                        <div class="p-6 flex-grow flex flex-col">
+                            <h3 class="text-xl font-bold text-slate-800 mb-2">Automated Exam Formatter</h3>
+                            <p class="text-slate-600 mb-4 flex-grow text-sm">
+                                A Python-based utility script that utilizes Large Language Models to structure, format, and generate quiz materials for classroom instruction automatically.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded">GenAI APIs</span>
+                                <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded">Python</span>
+                            </div>
+                            <a href="#" class="text-secondary font-medium hover:text-primary transition-colors text-sm">View Details &rarr;</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Research Section -->
+        <section id="research" class="py-24 bg-white">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-extrabold text-primary sm:text-4xl">Academic Research</h2>
+                    <div class="w-16 h-1 bg-secondary mx-auto mt-4 rounded"></div>
+                    <p class="mt-4 text-slate-600">Focusing on Natural Language Processing for low-resource environments.</p>
+                </div>
+
+                <div class="relative border-l-4 border-slate-200 ml-3 md:ml-0 md:pl-0 space-y-10">
+                    
+                    <!-- Item 1 -->
+                    <div class="relative md:flex items-center">
+                        <div class="hidden md:block w-32 text-right pr-8 text-sm font-bold text-secondary">
+                            Ongoing
+                        </div>
+                        <div class="absolute -left-10 md:left-auto md:relative md:mx-4 w-8 h-8 rounded-full bg-secondary flex items-center justify-center border-4 border-white shadow">
+                            <i class="fas fa-book text-white text-xs"></i>
+                        </div>
+                        <div class="ml-6 md:ml-0 bg-slate-50 p-6 rounded-xl border border-slate-100 shadow-sm flex-1">
+                            <span class="md:hidden block text-xs font-bold text-secondary mb-1">Ongoing</span>
+                            <h3 class="text-lg font-bold text-slate-800">Algerian Arabic ASR Dataset Collection</h3>
+                            <p class="mt-2 text-slate-600 text-sm">
+                                Spearheading the collection and transcription annotation of a diverse corpus for Algerian Arabic dialects. The goal is to provide a robust dataset for fine-tuning Automatic Speech Recognition models like Whisper for regional accuracy.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="relative md:flex items-center">
+                        <div class="hidden md:block w-32 text-right pr-8 text-sm font-bold text-secondary">
+                            Completed
+                        </div>
+                        <div class="absolute -left-10 md:left-auto md:relative md:mx-4 w-8 h-8 rounded-full bg-slate-400 flex items-center justify-center border-4 border-white shadow">
+                            <i class="fas fa-file-alt text-white text-xs"></i>
+                        </div>
+                        <div class="ml-6 md:ml-0 bg-slate-50 p-6 rounded-xl border border-slate-100 shadow-sm flex-1">
+                            <span class="md:hidden block text-xs font-bold text-secondary mb-1">Completed</span>
+                            <h3 class="text-lg font-bold text-slate-800">Cross-lingual RAG Architecture Implementation</h3>
+                            <p class="mt-2 text-slate-600 text-sm">
+                                Developed and evaluated a Retrieval-Augmented Generation pipeline capable of querying English language knowledge bases and generating highly accurate, contextual responses in Arabic dialects.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-24 bg-light">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-extrabold text-primary sm:text-4xl">Get in Touch</h2>
+                    <div class="w-16 h-1 bg-secondary mx-auto mt-4 rounded"></div>
+                    <p class="mt-4 text-slate-600">Whether you want to discuss academic research, educational tech, or collaboration opportunities, feel free to reach out.</p>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg p-8 border border-slate-100">
+                    <form action="#" method="POST" class="space-y-6" onsubmit="event.preventDefault(); showMessage();">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-slate-700 mb-1">Name</label>
+                                <input type="text" id="name" name="name" required class="w-full px-4 py-2 border border-slate-300 rounded-md focus:ring-secondary focus:border-secondary outline-none transition-colors" placeholder="Your Name">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-slate-700 mb-1">Email</label>
+                                <input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-slate-300 rounded-md focus:ring-secondary focus:border-secondary outline-none transition-colors" placeholder="you@example.com">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-slate-700 mb-1">Message</label>
+                            <textarea id="message" name="message" rows="4" required class="w-full px-4 py-2 border border-slate-300 rounded-md focus:ring-secondary focus:border-secondary outline-none transition-colors resize-none" placeholder="How can I help you?"></textarea>
+                        </div>
+                        
+                        <div id="form-message" class="hidden p-4 rounded-md bg-green-50 text-green-700 border border-green-200 text-sm">
+                            Thank you! Your message has been sent successfully.
+                        </div>
+
+                        <div>
+                            <button type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-primary hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-colors">
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-slate-300 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
+            
+            <div class="flex space-x-6 mb-8">
+                <a href="#" class="text-slate-400 hover:text-white transition-colors transform hover:scale-110">
+                    <span class="sr-only">GitHub</span>
+                    <i class="fab fa-github text-2xl"></i>
+                </a>
+                <a href="#" class="text-slate-400 hover:text-white transition-colors transform hover:scale-110">
+                    <span class="sr-only">LinkedIn</span>
+                    <i class="fab fa-linkedin text-2xl"></i>
+                </a>
+                <a href="#" class="text-slate-400 hover:text-white transition-colors transform hover:scale-110">
+                    <span class="sr-only">Email</span>
+                    <i class="fas fa-envelope text-2xl"></i>
+                </a>
+                <a href="#" class="text-slate-400 hover:text-white transition-colors transform hover:scale-110">
+                    <span class="sr-only">Google Scholar</span>
+                    <i class="fas fa-graduation-cap text-2xl"></i>
+                </a>
+            </div>
+            
+            <p class="text-sm text-slate-500 text-center">
+                &copy; <span id="year"></span> Portfolio. Designed for Tech & Education.
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobile menu toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        const mobileLinks = menu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+
+        // Form submission simulation
+        function showMessage() {
+            const msgBox = document.getElementById('form-message');
+            msgBox.classList.remove('hidden');
+            setTimeout(() => {
+                msgBox.classList.add('hidden');
+                document.querySelector('form').reset();
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
