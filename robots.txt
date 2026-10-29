@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mounirramli90.github.io/MY_portfolio/sitemap.xml
